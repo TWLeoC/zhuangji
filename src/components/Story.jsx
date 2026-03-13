@@ -11,7 +11,7 @@ function Story() {
         className="story__image"
         src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
         alt="莊記烤玉米品牌故事老照片"
-        onError={(e) => e.target.style.display = 'none'}
+        onError={e => (e.target.style.display = 'none')}
       />
 
       <div className="story__content">

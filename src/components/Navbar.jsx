@@ -17,8 +17,12 @@ function Navbar() {
       <nav className="navbar" role="navigation" aria-label="主要導覽">
         <div className="navbar__row">
           <div className="navbar__links">
-            <a href="#" className="navbar__link navbar__link--active">home</a>
-            <a href="#menu" className="navbar__link">menu</a>
+            <a href="#" className="navbar__link navbar__link--active">
+              home
+            </a>
+            <a href="#menu" className="navbar__link">
+              menu
+            </a>
           </div>
 
           <a href="#" className="navbar__logo" aria-label="莊記烤玉米首頁">
@@ -28,8 +32,12 @@ function Navbar() {
           </a>
 
           <div className="navbar__links">
-            <a href="#story" className="navbar__link">story</a>
-            <a href="#contact" className="navbar__link">contact</a>
+            <a href="#story" className="navbar__link">
+              story
+            </a>
+            <a href="#contact" className="navbar__link">
+              contact
+            </a>
           </div>
 
           <button
@@ -45,11 +53,33 @@ function Navbar() {
           </button>
         </div>
 
-        <div className={`navbar__mobile ${isMobileMenuOpen ? 'is-open' : ''}`} id="mobile-nav" role="menu">
-          <a href="#" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>home</a>
-          <a href="#menu" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>menu</a>
-          <a href="#story" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>story</a>
-          <a href="#contact" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>contact</a>
+        <div
+          className={`navbar__mobile ${isMobileMenuOpen ? 'is-open' : ''}`}
+          id="mobile-nav"
+          role="menu"
+        >
+          <a href="#" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>
+            home
+          </a>
+          <a href="#menu" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>
+            menu
+          </a>
+          <a
+            href="#story"
+            className="navbar__mobile-link"
+            role="menuitem"
+            onClick={closeMobileMenu}
+          >
+            story
+          </a>
+          <a
+            href="#contact"
+            className="navbar__mobile-link"
+            role="menuitem"
+            onClick={closeMobileMenu}
+          >
+            contact
+          </a>
         </div>
       </nav>
     </header>
