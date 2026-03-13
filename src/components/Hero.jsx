@@ -20,7 +20,7 @@ function Hero() {
       </section>
       <div className="hero-bar" aria-hidden="true"></div>
     </>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

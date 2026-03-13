@@ -36,7 +36,7 @@ function Menu() {
       price: '$20',
       img: 'https://images.unsplash.com/photo-1486328228599-85db4443971f?w=200&q=80',
     },
-  ]
+  ];
 
   return (
     <section className="menu" id="menu" aria-label="精選菜單">
@@ -64,7 +64,7 @@ function Menu() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

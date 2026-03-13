@@ -24,7 +24,7 @@ function Story() {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
-export default Story
+export default Story;

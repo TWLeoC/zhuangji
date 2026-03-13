@@ -1,4 +1,4 @@
-import logo from '../assets/zhuangji-logo.jpg'
+import logo from '../assets/zhuangji-logo.jpg';
 
 function Footer() {
   return (
@@ -52,7 +52,7 @@ function Footer() {
 
       <p className="footer__copyright">© 2024 Zhuang Ji Roasted Corn. All Rights Reserved.</p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
