@@ -16,7 +16,7 @@ const Login = () => {
   } = useForm({
     mode: 'onChange',
     defaultValues: {
-      username: 'leotest@gmail.com',
+      username: '',
       password: '',
     },
   });
@@ -42,8 +42,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="container login">
-        <h1>請先登入</h1>
+      <div className="container login w-25 my-3">
+        <h2 className="d-flex justify-content-center">請先登入</h2>
         <form className="form-floating" onSubmit={handleSubmit(onSubmit)}>
           <div className="form-floating mb-2">
             <input
@@ -83,7 +83,7 @@ const Login = () => {
             {errors.password && <p className="text-danger">{errors.password.message}</p>}
             <label htmlFor="password">Password</label>
           </div>
-          <button type="submit" className="btn btn-success w-100 mt-3" disabled={!isValid}>
+          <button type="submit" className="btn hero__btn w-100 mt-3 rounded-3" disabled={!isValid}>
             Login
           </button>
         </form>
