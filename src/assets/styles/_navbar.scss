@@ -1,0 +1,123 @@
+/* ============================================
+   NAVBAR
+============================================ */
+.navbar {
+  background: var(--cream);
+  padding: 20px 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--bar-brown);
+}
+
+.navbar__row {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.navbar__link {
+  font-family: var(--font-zh);
+  font-size: 18px;
+  color: var(--brown-mid);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.navbar__link:hover {
+  color: var(--gold);
+}
+.navbar__link--active {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.navbar__logo-zh {
+  font-family: var(--font-zh);
+  font-size: 22px;
+  font-weight: 700;
+  color: #607030;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.navbar__logo-en {
+  font-family: var(--font-en);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+}
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brown-mid);
+  transition: all 0.3s;
+}
+.navbar__hamburger[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: var(--cream);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.navbar__mobile.is-open {
+  max-height: 300px;
+}
+.navbar__mobile-link {
+  padding: 14px 60px;
+  font-family: var(--font-en);
+  font-size: 17px;
+  color: var(--brown-mid);
+  border-top: 1px solid var(--cream-dark);
+}

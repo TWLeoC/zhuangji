@@ -1,0 +1,84 @@
+/* ============================================
+   HERO
+============================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: #2c1a08;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(30, 16, 4, 0.72) 38%, rgba(10, 5, 2, 0.1) 100%);
+}
+
+.hero__content {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.hero__title {
+  font-size: 44px;
+  font-weight: 900;
+  color: #f5edd0;
+  line-height: 1.15;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero__sub {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e8d8a8;
+  letter-spacing: 4px;
+}
+
+.hero__btn {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background: var(--gold);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-zh);
+  border: 2px solid var(--gold-light);
+  border-radius: 2px;
+  letter-spacing: 4px;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  width: fit-content;
+}
+.hero__btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.hero-bar {
+  height: 10px;
+  background: var(--bar-brown);
+}

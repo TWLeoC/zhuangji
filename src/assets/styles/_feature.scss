@@ -1,0 +1,49 @@
+/* ============================================
+   FEATURES STRIP
+============================================ */
+.features {
+  background: var(--cream);
+  padding: 48px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 260px;
+}
+
+.feature__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--olive);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature__icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.feature__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brown-deep);
+  margin-bottom: 6px;
+}
+
+.feature__desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+}

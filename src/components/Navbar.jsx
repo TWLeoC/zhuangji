@@ -59,28 +59,27 @@ function Navbar() {
           id="mobile-nav"
           role="menu"
         >
-          <a href="#" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>
-            home
-          </a>
-          <a href="#menu" className="navbar__mobile-link" role="menuitem" onClick={closeMobileMenu}>
-            menu
-          </a>
-          <a
-            href="#story"
+          <Link
             className="navbar__mobile-link"
+            aria-current="page"
+            to="/"
             role="menuitem"
             onClick={closeMobileMenu}
           >
-            story
-          </a>
-          <a
-            href="#contact"
-            className="navbar__mobile-link"
-            role="menuitem"
-            onClick={closeMobileMenu}
-          >
-            contact
-          </a>
+            首頁
+          </Link>
+          <Link className="navbar__mobile-link" to="products" onClick={closeMobileMenu}>
+            產品列表
+          </Link>
+          <Link className="navbar__mobile-link" to="cart" onClick={closeMobileMenu}>
+            購物車
+          </Link>
+          <Link className="navbar__mobile-link" to="checkout" onClick={closeMobileMenu}>
+            結帳
+          </Link>
+          <Link className="navbar__mobile-link" to="login" onClick={closeMobileMenu}>
+            登入
+          </Link>
         </div>
       </nav>
     </header>
