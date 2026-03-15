@@ -1,0 +1,190 @@
+/* ============================================
+   DESIGN TOKENS
+============================================ */
+:root {
+  /* ── Brand Palette ── */
+  --brown-deep: #785e3d; /* 深焦棕 — 標題、主要文字、線條 */
+  --gold: #e6b450; /* 暖玉米黃 — 重點按鈕、優惠訊息 */
+  --gold-light: #f0c96a; /* 暖玉米黃 hover */
+  --olive: #849444; /* 自然綠 — 圖示點綴、食材介紹區 */
+  --cream: #f9f7f2; /* 復古米白 — 全站背景色 */
+
+  /* ── Derived / Supporting ── */
+  --cream-dark: #eee9dc;
+  --brown-mid: #8c6e4a;
+  --brown-light: #a6825a;
+  --olive-dark: #607030;
+  --bar-brown: #785e3d; /* 重用深焦棕作為橫條 */
+  --text-dark: #3c2a14;
+  --text-mid: #785e3d;
+  --text-muted: #9e8465;
+  --white: #ffffff;
+  --divider: #c8ae88;
+
+  --font-zh: 'Noto Serif TC', serif;
+  --font-en: 'EB Garamond', serif;
+  --font-ui: 'Noto Sans TC', sans-serif;
+
+  --shadow-card: 0 2px 12px rgba(120, 94, 61, 0.12);
+  --shadow-hover: 0 6px 24px rgba(120, 94, 61, 0.22);
+  --radius: 4px;
+}
+
+/* ============================================
+   RESET
+============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-zh);
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (max-width: 1024px)
+============================================ */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 32px 0;
+  }
+  .menu {
+    padding: 0 32px 48px;
+  }
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .features {
+    padding: 36px 32px;
+    gap: 32px;
+  }
+  .story {
+    padding: 56px 32px 40px;
+  }
+  footer {
+    padding: 32px 32px 20px;
+  }
+  .hero__content {
+    left: 40px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (max-width: 768px)
+============================================ */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 14px 20px 0;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: flex;
+  }
+  .navbar__mobile {
+    display: flex;
+  }
+
+  .navbar__row {
+    padding-bottom: 12px;
+  }
+  .navbar__logo-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .navbar__logo-zh {
+    font-size: 18px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 360px;
+  }
+  .hero__content {
+    left: 24px;
+    right: 24px;
+  }
+  .hero__title {
+    font-size: 30px;
+  }
+  .hero__sub {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  /* Features */
+  .features {
+    padding: 32px 20px;
+    gap: 28px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Menu */
+  .menu {
+    padding: 0 20px 40px;
+  }
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Story */
+  .story {
+    flex-direction: column;
+    padding: 56px 20px 36px;
+    gap: 24px;
+  }
+  .story__image {
+    width: 100%;
+    max-height: 220px;
+  }
+  .story__content {
+    padding: 0;
+  }
+  .story__section-header {
+    padding: 0 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 28px 20px 16px;
+  }
+  .footer__main {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .footer__sparkle {
+    display: none;
+  }
+}
