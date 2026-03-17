@@ -76,6 +76,16 @@
   white-space: nowrap;
 }
 
+.logo__c-green {
+  color: #669900;
+}
+.logo__c-brown {
+  color: #72500b;
+}
+.logo__c-gold {
+  color: #d8aa3d;
+}
+
 /* Hamburger */
 .navbar__hamburger {
   display: none;
@@ -120,4 +130,14 @@
   font-size: 17px;
   color: var(--brown-mid);
   border-top: 1px solid var(--cream-dark);
+}
+
+.title-sub .c-green {
+  color: #669900;
+}
+.c-brown {
+  color: #72500b;
+}
+.c-gold {
+  color: #d8aa3d;
 }

@@ -19,8 +19,15 @@ function Navbar() {
         <div className="navbar__row">
           <a href="#" className="navbar__logo" aria-label="莊記烤玉米首頁">
             <img src={logo} className="navbar__logo-icon" alt="莊記烤玉米" />
-            <span className="navbar__logo-zh">莊記烤玉米</span>
-            <span className="navbar__logo-en">Zhuang Ji Roasted Corn</span>
+            <div className="navbar__logo-zh">
+              <span className="c-green">莊記</span>
+              <span className="c-brown">烤</span>
+              <span className="c-gold">玉米</span>
+            </div>
+            <div className="navbar__logo-en">
+              <span className="c-green">Zhuang Ji </span>
+              <span className="c-gold">Roasted Corn</span>
+            </div>
           </a>
 
           <div className="navbar__links navbar__link--active">
