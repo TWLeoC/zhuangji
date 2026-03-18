@@ -6,12 +6,12 @@ import Story from '../../../components/Story';
 function Home() {
   return (
     <>
-      <main>
-        <Hero />
+      <Hero />
+      <div className="container">
         <Features />
         <Menu />
         <Story />
-      </main>
+      </div>
     </>
   );
 }
