@@ -6,11 +6,7 @@ function FrontendLayout() {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="container">
-          <Outlet />
-        </div>
-      </main>
+      <Outlet />
       <Footer />
     </>
   );
