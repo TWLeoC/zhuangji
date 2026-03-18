@@ -1,0 +1,100 @@
+// ── 品牌色 ────────────────────────────────────────
+$color-green: #669900;
+$color-brown: #72500b;
+$color-gold: #d8aa3d;
+$color-bg: #fdf6e8;
+$color-dark-bg: #1a1008;
+
+// ── Stage ────────────────────────────────────────
+.zj-stage {
+  position: fixed;
+  inset: 0;
+  background: $color-bg;
+  overflow: hidden;
+  transition: opacity 0.65s ease;
+
+  &--done {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// ── 地面線 ────────────────────────────────────────
+.zj-ground {
+  position: absolute;
+  bottom: calc(50% - 112px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, $color-brown 15%, $color-brown 85%, transparent);
+  opacity: 0.18;
+}
+
+// ── 車子容器 ──────────────────────────────────────
+.zj-cart-wrap {
+  position: absolute;
+  bottom: calc(50% - 112px);
+  width: min(45vw, 405px);
+  will-change: left, transform;
+}
+
+// ── SVG 商標 ──────────────────────────────────────
+.trademark-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// ── 標題區 ────────────────────────────────────────
+.zj-titles {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.zj-title-main {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  &--show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zj-title-sub {
+  font-size: clamp(0.7rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.24em;
+  margin-top: 0.55rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+
+  &--show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ── 品牌色字 ──────────────────────────────────────
+.zj-word {
+  &--zhuangji    { color: $color-green; }
+  &--kao         { color: $color-brown; }
+  &--yumi        { color: $color-gold; }
+  &--zhuangji-en { color: $color-green; }
+  &--roasted     { color: $color-gold; }
+}
